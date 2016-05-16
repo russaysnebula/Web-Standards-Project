@@ -1,0 +1,67 @@
+.NAVLINK{
+	position: relative;
+	margin: 20px;
+    float: center;
+}
+
+.NAVLINK a {
+	color: rgba(0,0,0,0.2);
+	font-weight: 700;
+	text-shadow: none;
+	width: 240px;
+    position: relative;
+    padding: 10px 60px;
+    margin: 20px 10px -8px 0px;
+    border-radius: 14px;
+    font-family: 'Helvetica', cursive;
+    font-size: 12px;
+    text-decoration: none;  
+    background-color:  #d0cfcf;
+    text-shadow: 0px -1.4px gray;
+}
+
+.NAVLINK a::before {
+	color: black;
+	content: attr(data-hover);
+	position: absolute;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.NAVLINK a:hover::before,
+.NAVLINK a:focus::before {
+	transform: scale(0.9);
+	opacity: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+}
+
+.img-responsive {
+    max-height: 100%;
+    width: auto;
+}
+
+
+@media screen and (max-width: 500px) {
+
+.img-responsive{
+ width: 33%;
+}
+
+}

@@ -1,0 +1,107 @@
+
+.NAVLINK{
+	position: relative;
+	margin: 20px;
+    float: center;
+}
+
+.NAVLINK a {
+	color: rgba(0,0,0,0.2);
+	font-weight: 700;
+	text-shadow: none;
+	width: 240px;
+    position: relative;
+    padding: 10px 60px;
+    margin: 20px 10px -8px 0px;
+    border-radius: 14px;
+    font-family: 'Helvetica', cursive;
+    font-size: 12px;
+    text-decoration: none;  
+    background-color:  #d0cfcf;
+    text-shadow: 0px -1.4px gray;
+}
+
+.NAVLINK a::before {
+	color: black;
+	content: attr(data-hover);
+	position: absolute;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.NAVLINK a:hover::before,
+.NAVLINK a:focus::before {
+	transform: scale(0.9);
+	opacity: 0;
+}
+.footerA{
+	background-color: #292c2f;
+	box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: normal 16px sans-serif;
+
+	padding: 50px 70px;
+	margin-top: 80px;
+}
+
+.footerA .footer-left p{
+	color:  #8f9296;
+	font-size: 14px;
+	margin: 0;
+}
+
+.footerA p.footer-links{
+	font-size:18px;
+	font-weight: bold;
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footerA p.footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footerA .footer-right{
+	float: right;
+	margin-top: 6px;
+	max-width: 180px;
+}
+
+.footerA .footer-right a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-left: 3px;
+}
+
+@media (max-width: 700px) {
+
+	.footerA .footer-left,
+	.footerA .footer-right{
+		text-align: center;
+	}
+
+	.footerA .footer-right{
+		float: none;
+		margin: 1 auto 20px;
+	}
+
+}
+footer{
+	position: fixed;
+	bottom: 0;
+}
+
