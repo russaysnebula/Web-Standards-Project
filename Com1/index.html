@@ -27,6 +27,11 @@
 							<span class="sdt_descr">testing</span>
 						</span>
 					</a>
+                     <div class="sdt_box">
+							<a href="#">Websites</a>
+							<a href="#">other website</a>
+							<a href="#">more websites</a>
+					</div>
 				</li>
 				<li>
 					<a href="#">
@@ -37,6 +42,11 @@
 							<span class="sdt_descr">testing</span>
 						</span>
 					</a>
+                    <div class="sdt_box">
+							<a href="#">Websites</a>
+							<a href="#">other website</a>
+							<a href="#">more websites</a>
+					</div>
 
 				</li>
 				<li>
@@ -48,6 +58,11 @@
 							<span class="sdt_descr">testing</span>
 						</span>
 					</a>
+                     <div class="sdt_box">
+							<a href="#">Websites</a>
+							<a href="#">other website</a>
+							<a href="#">more websites</a>
+					</div>
 				</li>
 				<li>
 					<a href="#">
@@ -58,6 +73,11 @@
 							<span class="sdt_descr">testing</span>
 						</span>
 					</a>
+                    <div class="sdt_box">
+							<a href="#">Websites</a>
+							<a href="#">other website</a>
+							<a href="#">more websites</a>
+					</div>
 				</li>
 				<li>
 					<a href="#">
@@ -68,6 +88,11 @@
 							<span class="sdt_descr">testing</span>
 						</span>
 					</a>
+                    <div class="sdt_box">
+							<a href="#">Websites</a>
+							<a href="#">other website</a>
+							<a href="#">more websites</a>
+					</div>
 				</li>
 				<li>
 					<a href="#">
@@ -78,13 +103,18 @@
 							<span class="sdt_descr">testing</span>
 						</span>
 					</a>
+                    <div class="sdt_box">
+							<a href="#">Websites</a>
+							<a href="#">other website</a>
+							<a href="#">more websites</a>
+					</div>
 				</li>
 			</ul>
 		</section>
 <!==issue getting javascript to work and it was taking too much time so i wrote it in static, ill correct the problem-->
 
         <script type="text/javascript">
-  $(function() {
+                   $(function() {
 
                 $('#sdt_menu > li').bind('mouseenter',function(){
 					var $elem = $(this);
@@ -103,12 +133,21 @@
 						 .find('.sdt_active')
 					     .stop(true)
 						 .animate({'height':'170px'},300,function(){
-						
+						var $sub_menu = $elem.find('.sdt_box');
+						if($sub_menu.length){
+							var left = '170px';
+							if($elem.parent().children().length == $elem.index()+1)
+								left = '-170px';
+							$sub_menu.show().animate({'left':left},200);
+						}	
 					});
 				}).bind('mouseleave',function(){
 					var $elem = $(this);
-										
-						$elem.find('.sdt_active')
+					var $sub_menu = $elem.find('.sdt_box');
+					if($sub_menu.length)
+						$sub_menu.hide().css('left','0px');
+					
+					$elem.find('.sdt_active')
 						 .stop(true)
 						 .animate({'height':'0px'},300)
 						 .andSelf().find('img')
