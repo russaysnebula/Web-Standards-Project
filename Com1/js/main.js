@@ -1,6 +1,7 @@
- $(function() {
-
-                $('#sdt_menu > li').bind('mouseenter',function(){
+console.log("first")  
+$(document).ready(function() {
+console.log("second")
+             $('#sdt_menu li').bind('mouseenter',function(){
 					var $elem = $(this);
 					$elem.find('img')
 						 .stop(true)
@@ -17,12 +18,21 @@
 						 .find('.sdt_active')
 					     .stop(true)
 						 .animate({'height':'170px'},300,function(){
-						
+						var $sub_menu = $elem.find('.sdt_box');
+						if($sub_menu.length){
+							var left = '170px';
+							if($elem.parent().children().length == $elem.index()+1)
+								left = '-170px';
+							$sub_menu.show().animate({'left':left, 'top':'85px'},500);
+						}	
 					});
 				}).bind('mouseleave',function(){
 					var $elem = $(this);
-										
-						$elem.find('.sdt_active')
+					var $sub_menu = $elem.find('.sdt_box');
+					if($sub_menu.length)
+						$sub_menu.hide();
+					
+					$elem.find('.sdt_active')
 						 .stop(true)
 						 .animate({'height':'0px'},300)
 						 .andSelf().find('img')

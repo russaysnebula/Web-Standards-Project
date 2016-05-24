@@ -1,7 +1,7 @@
 html { font-size: 70%; }
 body {
 	margin: 0;
-	background:  #808080;
+	background: #19092d;
 	font: 1.6em/1.4 sans-serif;
 	color: #999999;
 	font-weight: 100;
@@ -97,7 +97,7 @@ header img {
 	padding: 0;
 	background: url(images/texture.png) no-repeat center;
 	background-size: cover;
-	border: solid 1rem #e6e6e6;
+	border: solid 1rem #19092d;
 	overflow: hidden;
 	text-align: right;
 }
@@ -138,5 +138,5 @@ footer {
 }
 section, footer {
 	padding: 1rem;
-	background:  #595959;
+
 }
