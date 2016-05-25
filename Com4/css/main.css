@@ -97,6 +97,9 @@
 	height: 55px;
 	margin-bottom: 15px;
 }
+.Company-Name{
+    color:gray
+}
 
 .footerA form textarea{
 	height: 100px;

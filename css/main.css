@@ -44,16 +44,16 @@ body {
     top:110px;
 }
 img {
-    max-width: 90%;
+    max-width: 120%;
     height: auto;
-    margin-left: 50px;
+    margin-left: 2px;
 }
-h1 { 
-	
+h1 { 	
 	font-size: 40px;
 	font-weight: 300;
 	text-transform: uppercase;
 	color: whitesmoke;
+    margin-left: 40px;
 }
 h2 { 
 	font-size: 2.4rem;
@@ -95,7 +95,7 @@ header img {
 }
 #about {
 	padding: 0;
-	background: url(images/texture.png) no-repeat center;
+	background-color: rgb(228, 243, 245);
 	background-size: cover;
 	border: solid 1rem #19092d;
 	overflow: hidden;
@@ -122,7 +122,7 @@ article {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	padding: 3rem;
-	background: #fafafa;
+	background: rgb(228, 243, 245);
 }
 article img	{
 	display: block;
@@ -135,6 +135,7 @@ footer {
 	 width: 100%;
     text-align: right;
 	font-size: 1.5rem;
+    background-color: rgb(228, 243, 245);
 }
 section, footer {
 	padding: 1rem;
