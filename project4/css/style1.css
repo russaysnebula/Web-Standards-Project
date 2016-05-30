@@ -11,7 +11,7 @@
 
 .cb-slideshow .image-slide li { 
     width: 100%;
-    height: 61%;
+    height: 59%;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -291,7 +291,6 @@ ul.sdt_menu li div.sdt_box a{
 	width: 100%;
 	font: bold 16px sans-serif;
 	text-align: left;
-	padding: 50px 60px 40px;
 	margin-top: 80px;
 	overflow: hidden;
 }
@@ -382,33 +381,45 @@ ul.sdt_menu li div.sdt_box a{
 
 @media (max-width: 800px) {
 
+
+	.footerA .footer-left,
+	.footerA .footer-right{
+		float: none;
+		max-width: 400px;
+		margin:  auto;
+	}
+
+	.footerA .footer-left{
+		margin-bottom: 40px;
+	}
+
+	.footerA form{
+		margin-top: 30px;
+	}
+
+	.footerA form{
+		display: block;
+	}
+
+	.footerA form button{
+		float: none;
+	}
+    
 }
 footer{
-	position: fixed;
-	bottom: 0;
-    left: 0;
-    top: 354px
-}
-.container > header {
-    bottom: 0;
-    color: #fff;
-    margin: 0 auto;
-    padding: 2em;
-    position: absolute;
-    text-align: center;
-    width: 95%;
+	position: relative;
+  
+ 
 }
 
-body {
-  margin: 0;
-  background: #000; 
-}
-video#videobg { 
-    position: fixed;
-	bottom: 0;
-    right: 0;
-    top: 432px
-
-
-}
+  video{
+      transform:scaleX(1);
+      transform:scaleY(1);
+      float:right;
+      margin: -10px;
+      margin-bottom: -10px;
+      top:327px;
+      z-index: -1;
+      position:relative;
+  }
 
