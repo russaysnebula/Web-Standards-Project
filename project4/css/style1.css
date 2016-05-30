@@ -406,15 +406,9 @@ body {
 video#videobg { 
     position: fixed;
 	bottom: 0;
-    top: 373px;
-    left: 0;
-    height: 334px;
-	box-sizing:border-box;
-    margin: 0%;
-	width: 159%;
-	padding: 50px 50px 0px;
-	margin-top: 20px;
-	overflow: hidden;
+    right: 0;
+    top: 432px
+
 
 }
 
