@@ -287,10 +287,13 @@ ul.sdt_menu li div.sdt_box a{
 	color:white;
 }
 .footerA{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
 	font: bold 16px sans-serif;
 	text-align: left;
+	padding: 50px 60px 40px;
 	margin-top: 80px;
 	overflow: hidden;
 }
@@ -304,24 +307,31 @@ ul.sdt_menu li div.sdt_box a{
 	margin: 0 0 10px;
 	padding: 0;
 }
+
 .footerA .footer-links a{
 	display:inline-block;
 	line-height: 1.8;
 	text-decoration: none;
 	color:  inherit;
 }
+
 .footerA .footer-right{
 	float: right;
+    z-index: 2;
 }
+
 .footerA .footer-right p{
 	display: inline-block;
 	vertical-align: top;
 	margin: 6px 42px 0 0;
 	color: #ffffff;
 }
+
 .footerA form{
 	display: inline-block;
+    z-index: 2;
 }
+
 .footerA form input,
 .footerA form textarea{
 	display: block;
@@ -337,18 +347,24 @@ ul.sdt_menu li div.sdt_box a{
 	color:  #d1d2d2;
 	width: 400px;
 	padding: 18px;
+    z-index: 2;
 }
+
 .footerA form input{
 	height: 55px;
 	margin-bottom: 15px;
+    z-index: 2;
 }
 .Company-Name{
     color:gray
 }
+
 .footerA form textarea{
 	height: 100px;
 	margin-bottom: 20px;
+    z-index: 2;
 }
+
 .footerA form button{
 	border-radius: 3px;
 	background-color:  #33383b;
@@ -357,7 +373,9 @@ ul.sdt_menu li div.sdt_box a{
 	padding: 15px 50px;
 	font-weight: bold;
 	float: right;
+    z-index: 2;
 }
+
 @media (max-width: 1000px) {
 
 	.footerA {
@@ -371,6 +389,7 @@ ul.sdt_menu li div.sdt_box a{
 	.footerA form input,
 	.footerA form textarea{
 		width: 250px;
+        z-index: 2;
 	}
 
 	.footerA form button{
@@ -381,12 +400,15 @@ ul.sdt_menu li div.sdt_box a{
 
 @media (max-width: 800px) {
 
+	.footerA{
+		padding: 30px;
+	}
 
 	.footerA .footer-left,
 	.footerA .footer-right{
 		float: none;
-		max-width: 400px;
-		margin:  auto;
+		max-width: 300px;
+		margin: 0 auto;
 	}
 
 	.footerA .footer-left{
@@ -404,22 +426,25 @@ ul.sdt_menu li div.sdt_box a{
 	.footerA form button{
 		float: none;
 	}
-    
 }
 footer{
-	position: relative;
-  
- 
+	position:absolute;
+	bottom: 0;
+    left: 0;
 }
 
-  video{
-      transform:scaleX(1);
-      transform:scaleY(1);
-      float:right;
-      margin: -10px;
-      margin-bottom: -10px;
-      top:327px;
-      z-index: -1;
-      position:relative;
-  }
+video#videobg { 
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	transform: translateX(-50%) translateY(-50%);
+	background: url('images/poster.jpg') no-repeat;
+	background-size: cover;
+	transition: 1s opacity;
+}
 
